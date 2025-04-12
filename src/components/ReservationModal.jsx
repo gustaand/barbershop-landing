@@ -31,9 +31,29 @@ function ReservationModal({ isOpen, onClose, services = defaultServices }) {
     e.preventDefault(); // Prevenir recarga de página
     setError(''); // Limpiar errores previos
 
-    // Validación simple (puedes mejorarla)
-    if (!name || !phone || !selectedService || !date || !time) {
+    // Validación mejorada
+    const phoneRegex = /^[0-9]{10,15}$/; // Asegura que el teléfono tenga entre 10 y 15 dígitos
+    const today = new Date();
+    const selectedDate = new Date(date);
+
+    if (!name.trim() || !phone.trim() || !selectedService || !date || !time) {
       setError('Por favor, completa todos los campos.');
+      return;
+    }
+
+    if (!phoneRegex.test(phone)) {
+      setError('Por favor, ingresa un número de teléfono válido (10-15 dígitos).');
+      return;
+    }
+
+    if (selectedDate < today.setHours(0, 0, 0, 0)) {
+      setError('La fecha seleccionada no puede ser anterior a hoy.');
+      return;
+    }
+
+    const [hours, minutes] = time.split(':').map(Number);
+    if (hours < 9 || (hours === 19 && minutes > 30) || hours > 19) {
+      setError('La hora debe estar entre las 09:00 y las 19:30.');
       return;
     }
 

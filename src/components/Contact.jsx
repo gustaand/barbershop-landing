@@ -1,73 +1,50 @@
 import React from 'react';
-import { FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaClock } from 'react-icons/fa'; // o fa6
 
 function Contact() {
   return (
-    <section id="contact" className="py-16 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">
+    // Padding vertical y horizontal ajustado
+    <section id="contact" className="py-12 md:py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12 text-center text-gray-800">
           Visítanos o Llámanos
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Información de Contacto */}
-          <div className="space-y-6 text-lg text-gray-700">
+          <div className="space-y-5 md:space-y-6 text-base md:text-lg text-gray-700">
             <div className="flex items-start">
-              <FaMapMarkerAlt size={25} className="text-yellow-600 mr-4 mt-1 flex-shrink-0" />
+              <FaMapMarkerAlt size={20} md:size={25} className="text-yellow-600 mr-3 md:mr-4 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-gray-900">Dirección:</h3>
-                <p>Calle Falsa 123, Barrio Barber, Ciudad Ejemplo</p>
-                {/* Podrías añadir un link a Google Maps aquí */}
-                <a href="#" className="text-yellow-600 hover:text-yellow-700 transition duration-300">Ver en mapa</a>
+                <h3 className="font-semibold text-gray-900 mb-1">Dirección:</h3>
+                <p className="text-sm md:text-base">Calle Falsa 123, Barrio Barber, Ciudad Ejemplo</p>
+                <a href="#" className="text-yellow-600 hover:text-yellow-700 transition duration-300 text-sm md:text-base">Ver en mapa</a>
               </div>
             </div>
-            <div className="flex items-center">
-              <FaPhone size={25} className="text-yellow-600 mr-4 flex-shrink-0" />
+            <div className="flex items-center"> {/* 'items-center' suele ir bien aquí */}
+              <FaPhone size={20} md:size={25} className="text-yellow-600 mr-3 md:mr-4 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-gray-900">Teléfono / WhatsApp:</h3>
-                <p>+34 123 456 789</p>
-                {/* Link para llamar o WhatsApp */}
-                <a href="tel:+34123456789" className="text-yellow-600 hover:text-yellow-700 transition duration-300">Llamar ahora</a>
+                <h3 className="font-semibold text-gray-900 mb-1">Teléfono / WhatsApp:</h3>
+                <p className="text-sm md:text-base">+34 123 456 789</p>
+                <a href="tel:+34123456789" className="text-yellow-600 hover:text-yellow-700 transition duration-300 text-sm md:text-base">Llamar ahora</a>
               </div>
             </div>
             <div className="flex items-start">
-              <FaClock size={25} className="text-yellow-600 mr-4 mt-1 flex-shrink-0" />
+              <FaClock size={20} md:size={25} className="text-yellow-600 mr-3 md:mr-4 mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-gray-900">Horario:</h3>
-                <p>Lunes a Viernes: 9:00 - 20:00</p>
-                <p>Sábados: 10:00 - 15:00</p>
-                <p>Domingos: Cerrado</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Horario:</h3>
+                <p className="text-sm md:text-base">Lunes a Viernes: 9:00 - 20:00</p>
+                <p className="text-sm md:text-base">Sábados: 10:00 - 15:00</p>
+                <p className="text-sm md:text-base">Domingos: Cerrado</p>
               </div>
             </div>
           </div>
 
-          {/* Formulario de Contacto (Opcional) o Mapa */}
+          {/* Mapa o Formulario */}
           <div>
-            {/* Opción 1: Placeholder para Mapa */}
-            <div className="bg-gray-200 h-64 md:h-80 rounded-lg shadow-md flex items-center justify-center text-gray-500">
+            <div className="bg-gray-200 h-56 sm:h-64 md:h-80 rounded-lg shadow-md flex items-center justify-center text-gray-500 text-center p-4">
               Aquí podría ir un mapa interactivo (Google Maps Embed)
             </div>
-
-            {/* Opción 2: Formulario Simple (requiere lógica adicional para funcionar) */}
-            {/*
-             <form className="space-y-4">
-               <h3 className="text-xl font-semibold mb-4 text-gray-800">Envíanos un mensaje</h3>
-               <div>
-                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nombre</label>
-                 <input type="text" id="name" name="name" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" />
-               </div>
-               <div>
-                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
-                 <input type="email" id="email" name="email" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" />
-               </div>
-               <div>
-                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Mensaje</label>
-                 <textarea id="message" name="message" rows="4" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"></textarea>
-               </div>
-               <button type="submit" className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-300">
-                 Enviar Mensaje
-               </button>
-             </form>
-             */}
+            {/* Si usas el formulario, asegúrate que los inputs usen w-full y el espaciado sea cómodo */}
           </div>
         </div>
       </div>
