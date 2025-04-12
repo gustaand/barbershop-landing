@@ -3,11 +3,11 @@ import React from 'react';
 function Header({ onReserveClick }) {
   return (
     // Reducimos padding vertical base, aumentamos en md
-    <header className="bg-gray-900 text-white shadow-md sticky top-0 z-40">
+    <header className="bg-stone-950 text-white shadow-sm fixed flex w-full top-0 z-40">
       <nav className="container mx-auto px-4 sm:px-6 py-3 md:py-4 flex justify-between items-center">
         {/* Tamaño de fuente base más pequeño, aumenta en md */}
         <h1 className="text-xl md:text-2xl font-bold text-yellow-500 font-serif">
-          Maloni Barbershop
+          Barbería Maloni
         </h1>
         <div>
           {/* Botón con padding y tamaño de fuente más pequeños base, aumenta en md */}
