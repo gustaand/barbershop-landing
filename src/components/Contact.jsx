@@ -10,7 +10,6 @@ function Contact() {
           Visítanos o Llámanos
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Información de Contacto */}
           <div className="space-y-5 md:space-y-6 text-base md:text-lg text-gray-700">
             <div className="flex items-start">
               <FaMapMarkerAlt size={20} md:size={25} className="text-yellow-600 mr-3 md:mr-4 mt-1 flex-shrink-0" />
@@ -41,14 +40,17 @@ function Contact() {
 
           {/* Mapa o Formulario */}
           <div>
-            <div className="bg-gray-200 h-56 sm:h-64 md:h-80 rounded-lg shadow-md flex items-center justify-center text-gray-500 text-center p-4">
-              Aquí podría ir un mapa interactivo (Google Maps Embed)
+            <div className="bg-gray-200 h-56 sm:h-64 md:h-80 rounded-lg shadow-md flex items-center justify-center text-gray-500 text-center box-border overflow-hidden select-none p-1">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.7055825946627!2d3.210238375824039!3d39.56624567158892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1296490755ffc629%3A0x12710f517c219131!2sCarrer%20de%20s&#39;Hort%20de%20la%20Vila%2C%203%2C%2007500%20Manacor%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1745353006939!5m2!1ses!2ses"
+                className="w-full h-full rounded-lg select-none"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
             {/* Si usas el formulario, asegúrate que los inputs usen w-full y el espaciado sea cómodo */}
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }
 

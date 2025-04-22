@@ -14,6 +14,8 @@ const serviceOptions = [
 ];
 
 function App() {
+  // Estado para la aplicación
+
   // Estado para controlar si el modal está abierto o cerrado
   const [isModalOpen, setIsModalOpen] = useState(false);
 

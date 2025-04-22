@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCut, FaShower } from 'react-icons/fa';
-import { GiBeard } from "react-icons/gi";
+import { GiBeard, GiRazor } from "react-icons/gi";
 
 const servicesList = [
   {
@@ -8,15 +8,15 @@ const servicesList = [
     description: "Precisión y estilo atemporal.",
     icon: <FaCut size={40} className="mb-4 text-yellow-600" />
   },
-  {
-    name: "Arreglo de Barba",
-    description: "Perfilado, recorte y cuidado experto.",
-    icon: <GiBeard size={40} className="mb-4 text-yellow-600" />
-  },
+  // {
+  //   name: "Arreglo de Barba",
+  //   description: "Perfilado, recorte y cuidado experto.",
+  //   icon: <GiBeard size={40} className="mb-4 text-yellow-600" />
+  // },
   {
     name: "Afeitado Tradicional",
     description: "Experiencia de afeitado con navaja y toalla caliente.",
-    icon: <FaShower size={40} className="mb-4 text-yellow-600" />
+    icon: <GiRazor size={40} className="mb-4 text-yellow-600" />
   },
   {
     name: "Corte y Barba",
@@ -27,11 +27,6 @@ const servicesList = [
     name: "Corte Infantil",
     description: "Cortes divertidos y cómodos para los más pequeños.",
     icon: <FaCut size={40} className="mb-4 text-yellow-600" />
-  },
-  {
-    name: "Tratamientos Capilares",
-    description: "Revitaliza y cuida tu cabello.",
-    icon: <FaShower size={40} className="mb-4 text-yellow-600" />
   },
 ];
 function Services() {
